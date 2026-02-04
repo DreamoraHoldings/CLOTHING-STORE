@@ -1,0 +1,299 @@
+<!-- index.html - Homepage -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dreamora | Modern Fashion</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <span class="logo-text">Dreamora</span>
+        </a>
+        
+        <div class="nav-menu" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="shop.html?category=new">New Arrivals</a></li>
+            <li><a href="shop.html?category=sale">Sale</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-actions">
+          <button class="icon-btn search-toggle" id="searchToggle" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          
+          <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <div class="cart-wrapper">
+            <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              <span class="cart-count" id="cartCount">0</span>
+            </a>
+            
+            <!-- Mini Cart Dropdown -->
+            <div class="mini-cart" id="miniCart">
+              <div class="mini-cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-mini-cart" id="closeMiniCart">&times;</button>
+              </div>
+              <div class="mini-cart-items" id="miniCartItems">
+                <p class="empty-cart-msg">Your cart is empty</p>
+              </div>
+              <div class="mini-cart-footer">
+                <div class="mini-cart-total">
+                  <span>Subtotal:</span>
+                  <span id="miniCartTotal">$0.00</span>
+                </div>
+                <a href="cart.html" class="btn btn-primary btn-full">View Cart</a>
+                <a href="checkout.html" class="btn btn-secondary btn-full">Checkout</a>
+              </div>
+            </div>
+          </div>
+
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search Overlay -->
+      <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+          <input type="text" class="search-input" id="searchInput" placeholder="Search for products...">
+          <button class="close-search" id="closeSearch">&times;</button>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-subtitle">New Collection 2026</span>
+        <h1 class="hero-title">Redefine Your Style</h1>
+        <p class="hero-description">Discover the latest trends in fashion with our curated collection of premium clothing designed for the modern individual.</p>
+        <div class="hero-buttons">
+          <a href="shop.html" class="btn btn-primary btn-lg">Shop Now</a>
+          <a href="shop.html?category=new" class="btn btn-outline btn-lg">View Lookbook</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&auto=format&fit=crop" alt="Fashion Model">
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Featured Categories -->
+  <section class="categories">
+    <div class="container">
+      <h2 class="section-title">Shop by Category</h2>
+      <div class="category-grid">
+        <a href="shop.html?category=men" class="category-card large">
+          <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?w=600&auto=format&fit=crop" alt="Men's Fashion">
+          <div class="category-overlay">
+            <h3>Men's Collection</h3>
+            <span class="category-link">Shop Now →</span>
+          </div>
+        </a>
+        <a href="shop.html?category=women" class="category-card large">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&auto=format&fit=crop" alt="Women's Fashion">
+          <div class="category-overlay">
+            <h3>Women's Collection</h3>
+            <span class="category-link">Shop Now →</span>
+          </div>
+        </a>
+        <a href="shop.html?category=accessories" class="category-card">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=400&auto=format&fit=crop" alt="Accessories">
+          <div class="category-overlay">
+            <h3>Accessories</h3>
+          </div>
+        </a>
+        <a href="shop.html?category=footwear" class="category-card">
+          <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&auto=format&fit=crop" alt="Footwear">
+          <div class="category-overlay">
+            <h3>Footwear</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured-products">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Items</h2>
+        <a href="shop.html" class="view-all">View All Products →</a>
+      </div>
+      <div class="product-grid" id="featuredGrid">
+        <!-- Products injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Section -->
+  <section class="promo">
+    <div class="promo-container">
+      <div class="promo-content">
+        <span class="promo-tag">Limited Time</span>
+        <h2 class="promo-title">Summer Sale</h2>
+        <p class="promo-text">Up to 50% off on selected items. Don't miss out on these incredible deals.</p>
+        <a href="shop.html?category=sale" class="btn btn-primary btn-lg">Shop the Sale</a>
+      </div>
+      <div class="promo-timer" id="promoTimer">
+        <div class="timer-item">
+          <span class="timer-number" id="days">02</span>
+          <span class="timer-label">Days</span>
+        </div>
+        <div class="timer-item">
+          <span class="timer-number" id="hours">14</span>
+          <span class="timer-label">Hours</span>
+        </div>
+        <div class="timer-item">
+          <span class="timer-number" id="minutes">35</span>
+          <span class="timer-label">Mins</span>
+        </div>
+        <div class="timer-item">
+          <span class="timer-number" id="seconds">42</span>
+          <span class="timer-label">Secs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Join the Dreamora Family</h2>
+        <p>Subscribe to receive exclusive offers, early access to new arrivals, and styling tips.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Dreamora</a>
+          <p>Elevating everyday fashion with premium quality and timeless design.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?category=men">Men</a></li>
+            <li><a href="shop.html?category=women">Women</a></li>
+            <li><a href="shop.html?category=accessories">Accessories</a></li>
+            <li><a href="shop.html?category=sale">Sale</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li>hello@dreamora.com</li>
+            <li>+1 (555) 123-4567</li>
+            <li>123 Fashion Ave, NY 10001</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dreamora. All rights reserved.</p>
+        <div class="payment-methods">
+          <span>We accept:</span>
+          <div class="payment-icons">
+            <span class="payment-icon">VISA</span>
+            <span class="payment-icon">MC</span>
+            <span class="payment-icon">AMEX</span>
+            <span class="payment-icon">PP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <span class="toast-icon">✓</span>
+      <span class="toast-message" id="toastMessage">Item added to cart!</span>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
